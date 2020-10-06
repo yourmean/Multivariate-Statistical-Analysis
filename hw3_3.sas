@@ -1,5 +1,8 @@
+  
+/*multivariate statistics assignment #3*/
+
 /*Q3*/
-/*A: ½ÇÇè±º, B: ´ëÁ¶±º  d1=x1-y1, d2=x2-y2*/
+/*A: ì‹¤í—˜êµ°, B: ëŒ€ì¡°êµ°  d1=x1-y1, d2=x2-y2*/
 
 data datax;
 input x1 x2;
@@ -50,7 +53,7 @@ d1 = x1 - y1;
 d2 = x2 - y2;
 run; quit;
 
-/*Æò±Õº¤ÅÍ*/
+/*í‰ê· ë²¡í„°*/
 proc means data=dataxy mean maxdec=2;
 run; quit;
 
@@ -60,7 +63,7 @@ var d1 d2;
 run; quit;
 proc print data=cov_xy; run;
 
-/*°¡¼³ °ËÁ¤*/
+/*ê°€ì„¤ ê²€ì •*/
 proc iml;
 use cov_xy;
 cov=1:2; mean=3;
