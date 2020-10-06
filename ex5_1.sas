@@ -1,4 +1,4 @@
-/*다변량통계학 과제 #3*/
+/* multivariate statistics assignment #3 #3*/
 
 /*Q1*/
 data sweat_raw ;
