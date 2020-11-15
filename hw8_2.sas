@@ -1,3 +1,5 @@
+/*multivariate statistics assignment #8*/
+
 /*Q2*/
 data diabetes;
 input y1	y2	x1	x2	x3;
