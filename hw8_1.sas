@@ -1,5 +1,3 @@
-/*multivariate statistics assignment #8*/
-
 /*Q1*/
 data chem;
 input y1	y2	x1	x2	x3;
@@ -19,9 +17,21 @@ cards;
 ;
 proc print data=chem; run; quit;
 
-proc cancorr data=chem
+proc cancorr data=chem out=c_out
 vprefix=u vname='conditions'
 wprefix=v wname='products';
 var x1 x2 x3;
 with y1 y2;
+run; quit;
+
+proc print data=c_out;
+var u1 v1;
+run; quit;
+
+proc sgplot data=c_out;
+scatter x=u1 y=v1;
+run; quit;
+
+proc sgplot data=c_out;
+scatter x=u2 y=v2;
 run; quit;
